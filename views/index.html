@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles/bootstrap.css" rel="stylesheet" />
+    <link href="/styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+    <script src="/js/bootstrap.bundle.js"></script>
+
+    <title>Vacunación MX</title>
+  </head>
+  <body>
+    <!-------------------------------------------->
+    <!--            Barra de navegación         -->
+    <!-------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-50">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">VacunaciónMX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+            <li class="nav-item text-">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Base de Datos</a
+              >
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Educación</a
+              >
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Noticias</a
+              >
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Regulación</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex">
+            <button type="button" class="btn btn-primary me-3 btn-lg">
+              Ingresar
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-------------------------------------------->
+    <!--    Formulario de agenda de vacunación  -->
+    <!-------------------------------------------->
+    <section name="form-sched-vaccine" class="container">
+      <div class="container-fluid" width="50%">
+        <div class="row">
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center"
+          >
+            <h1 class="header-color-text">
+              Pelea contra el virus con las vacunas
+            </h1>
+            <p class="paraph-color-text">
+              Detengamos esta pandemia matando al virus con una vacuna, no
+              permitas que tú o tu familia se infecten!
+            </p>
+            <ul class="list-inline">
+              <img
+                class="svg-golden-icon"
+                src="/assets/svg/shield-fill-check.svg"
+                alt="Escudo"
+                width="25px"
+                height="25px"
+              />
+              <li class="list-inline-item header-color-text">
+                La mejor protección
+              </li>
+              <img
+                class="svg-golden-icon"
+                src="/assets/svg/star.svg"
+                alt="Estrella"
+                width="25px"
+                height="25px"
+              />
+              <li class="list-inline-item header-color-text">
+                Vacunas seleccionadas
+              </li>
+            </ul>
+          </div>
+          <div class="col imgcont imgbg">
+            <img
+              src="/assets/png/Enfermera_inyeccion_nobg_alt.png"
+              class="img-fit-div"
+              alt="Enfermera con inyección"
+              height="50vh"
+            />
+          </div>
+          <p class="header-color-text">
+            <i class="bi bi-clock-fill icon-blue-color"></i> Agenda tu cita de
+            vacunación
+          </p>
+          <div
+            class="row div-white-background align-content-center align-items-center shadow"
+          >
+            <div class="mb-3 col">
+              <label
+                for="staticLocation"
+                class="col-sm-2 col-form-label paraph-color-text d-inline-flex"
+                ><i class="bi bi-geo-alt-fill icon-blue-color"></i>
+                Ubicación</label
+              >
+              <select
+                class="form-select form-select-sm mb-3"
+                aria-label=".form-select-lg"
+              >
+                <option value="1" selected>Guadalajara, Jalisco</option>
+                <option value="2">Monterrey, Nuevo León</option>
+                <option value="3">Ciudad de México</option>
+                <option value="4">Durango, Durango</option>
+              </select>
+            </div>
+            <div class="mb-3 col">
+              <label
+                for="inputDate"
+                class="col-sm-2 col-form-label paraph-color-text d-inline-flex"
+                ><i class="bi bi-calendar3 icon-blue-color"></i> Fecha</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="date"
+                  class="form-control form-control-sm mb-3"
+                  id="inputDate"
+                  placeholder="Date"
+                />
+              </div>
+              <!--<div class="col-sm-10">
+                                <intput type="text" class="form-control" id="inputDateText">
+                            </div>-->
+            </div>
+            <div class="mb-3 col">
+              <label
+                for="staticVaccineType"
+                class="col-sm-2 col-form-label paraph-color-text d-inline-flex"
+                ><i class="bi bi-eyedropper icon-blue-color"></i> Vacuna</label
+              >
+              <div class="col-sm-10">
+                <select
+                  class="form-select form-select-sm mb-3"
+                  aria-label=".form-select-lg"
+                >
+                  <option value="1" selected>AstraZeneca</option>
+                  <option value="2">Sinovac</option>
+                  <option value="3">Pfizer</option>
+                  <option value="4">Moderna</option>
+                </select>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <input
+                type="submit"
+                class="btn btn-primary btn-lg form-control alignit"
+                id="inputSubmit"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <img src="/assets/png/vaccines_nobg.png" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <h1 class="header-color-text text-start">
+            ¿Por qué debería vacunarme?
+          </h1>
+          <p class="paraph-color-text text-start">
+            Para evitar cualquier duda sobre aplicarse la vacuna del
+            COVID-19,<br />
+            identifique los siguientes 4 beneficios de la vacunación contra el
+            COVID-19:
+          </p>
+          <div class="row row-cols-4 row-cols-md-4 g-4">
+            <div class="col">
+              <div class="card h-100" style="width: 18rem">
+                <div class="card-body">
+                  <i class="bi bi-sliders icon-blue-color card-icon-size"></i>
+                  <h5 class="card-title">Minimizar el contagio del virus</h5>
+                  <p class="card-text">
+                    La vacuna ha probado ser capaz de prevenir de manera
+                    efectiva que alguien sea contagiado de Coronavir
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" style="width: 18rem">
+                <div class="card-body">
+                  <i
+                    class="bi bi-shield-fill-check icon-blue-color card-icon-size"
+                  ></i>
+                  <h5 class="card-title">Generar anticuerpos</h5>
+                  <p class="card-text">
+                    Se ha probado que la vacuna del COVID-19 ayuda a generar
+                    anticuerpos de respuesta en el sistema inmune.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" style="width: 18rem">
+                <div class="card-body">
+                  <i
+                    class="bi bi-people-fill icon-blue-color card-icon-size"
+                  ></i>
+                  <h5 class="card-title">
+                    Proteger a la gente a nuestro alrededor
+                  </h5>
+                  <p class="card-text">
+                    Los beneficios de la vacunación contra el COVID-19 son que
+                    la vacuna que obtenemos también ayuda a proteger a la gente
+                    a nuestro alrededor.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" style="width: 18rem">
+                <div class="card-body">
+                  <i
+                    class="bi bi-graph-up-arrow icon-blue-color card-icon-size"
+                  ></i>
+                  <h5 class="card-title">Crear inmunidad de grupo</h5>
+                  <p class="card-text">
+                    La vacunación contra el COVID-19 también es beneficioso para
+                    crear inmunidad de grupo o inmunidad colectiva.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="col img-bg-80">
+              <img
+                src="/assets/png/Mujer_Cubrebocas_nobg_adb.png"
+                class="img-fit-div"
+                alt="Mujer con cubrebocas"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <h1 class="header-color-text text-end">
+              Preparaciones antes de la vacunación
+            </h1>
+            <p class="paraph-color-text text-end">
+              El éxito de las vacunas está fuertemente influenciada por la
+              fortaleza del sistema inmune del cuerpo. Por lo tanto, hay varias
+              cosas que se pueden probar para hacer que la vacuna del COVID-19
+              funcione:
+            </p>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <i class="bi bi-shield-fill-x icon-blue-color"></i>Evita las
+                    bebidas alcohólicas
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <i class="bi bi-x-square-fill icon-blue-color"></i>
+                    Evita el estrés
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <i class="bi bi-apple icon-blue-color"></i>
+                    Aliméntate sanamente
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <i class="bi bi-check-square-fill icon-blue-color"></i>
+                    Descansa el tiempo suficiente
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    <i class="bi bi-heart-fill icon-blue-color"></i>
+                    Ejercítate o realiza actividad física
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <div class="row">            
+            <div class="col">
+                <h1 class="header-color-text text-start">
+                    Contacto de Emergencia
+                  </h1>
+                  <p class="paraph-color-text text-start">
+                    Comúnicate con uno de los contactos en el apartado inferior si tú o tu familia sienten algún malestar y tienen síntomas similares al Covid-19. Asegúrate de cuidarte antes de reportarlo a nosotros:
+                  </p>
+                <div class="row row-cols-2 row-cols-md-2 g-4">
+                    <div class="col">
+                      <div class="card h-100 text-center" style="width: 18rem">
+                        <div class="card-body">                          
+                          <h5 class="card-title"><i class="bi bi-telephone-fill icon-blue-color card-icon-size"></i>Llama</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">021.123.145.14</h6>
+                          <a href="#" class="btn btn-primary">Llama ahora</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 text-center" style="width: 18rem">
+                        <div class="card-body">
+                          
+                          <h5 class="card-title"><i
+                            class="bi bi-chat-dots-fill icon-blue-color card-icon-size"
+                          ></i>Chat</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">021.123.145.14</h6>
+                          <a href="#" class="btn btn-primary">Chatea ahora</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 text-center" style="width: 18rem">
+                        <div class="card-body">
+                          
+                          <h5 class="card-title"><i
+                            class="bi bi-camera-video-fill icon-blue-color card-icon-size"
+                          ></i>
+                            Videollamada
+                          </h5>
+                          <h6 class="card-subtitle mb-2 text-muted">021.123.145.14</h6>
+                          <a href="#" class="btn btn-primary">Videollamada ahora</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 text-center" style="width: 18rem">
+                        <div class="card-body">
+                          <i
+                            class="bi bi-envelope-fill icon-blue-color card-icon-size"
+                          ></i>
+                          <h5 class="card-title">Mensaje</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">021.123.145.14</h6>
+                          <a href="#" class="btn btn-primary">Enviar mensaje ahora</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          <div class="col">
+            <div class="col img-bg-80">
+              <img
+                src="/assets/png/Enfermero_estetoscopio_nobg_ccexpress.png"
+                class="img-fit-div"
+                alt="Mujer con cubrebocas"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-primary bg-opacity-25 text-muted p-3">
+        <script src="/js/index.js"></script>
+    
+        <!-- Section: Links  -->
+        <section class="">
+        <div class="container text-center text-md-start mt-5 align-items-center align-middle">
+            <!-- Grid row -->
+            <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h4 class="fw-bold mb-4 header-color-text text-center">Vacunación
+                </h4>
+                <p class="paraph-color-text text-center">
+                Nuestra meta es ayudar al mundo a liberarse de la pandemia actual.
+                </p>
+                <!-- Copyright -->
+                 <div class="text-center p-4">
+                    © 2021 Vacunación. Derechos reservados
+                </div>
+                <!-- Copyright -->
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="fw-bold mb-4 header-color-text">
+                Acerca de
+                </h6>
+                <p>
+                <a href="#!" class="text-reset paraph-color-text">Nosotros</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset paraph-color-text">Destacados</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset paraph-color-text">Blog & Noticias</a>
+                </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="fw-bold mb-4 header-color-text">Compañía
+                </h6>
+                <p>
+                <a href="#!" class="text-reset paraph-color-text">¿Cómo trabajamos?</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset paraph-color-text">Capital</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset paraph-color-text">Seguridad</a>
+                </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="fw-bold mb-4 header-color-text">
+                Ayuda
+                </h6>
+                <p class="text-reset paraph-color-text">FAQs</p>
+                <p class="text-reset paraph-color-text">Centro de ayuda</p>
+                <p class="text-reset paraph-color-text">Contactános</p>
+
+            </div>
+            <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        </section>
+        <!-- Section: Links  -->
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>
